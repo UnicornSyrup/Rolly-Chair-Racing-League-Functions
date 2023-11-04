@@ -1,10 +1,10 @@
 const { app } = require('@azure/functions');
-// const { MongoClient } = require("mongodb");
+const { MongoClient } = require("mongodb");
 app.http('httpTrigger1', {
     methods: ['GET',],
     authLevel: 'anonymous',
     handler: async (request, context) => {
-        /*
+        
         let uri = `mongodb+srv://dbUser:${process.env.MONGO_PASSWORD}@cluster0.isxlqf2.mongodb.net/?retryWrites=true&w=majority`;
         // Create a MongoClient with a MongoClientOptions object to set the Stable API version
         let client = new MongoClient(uri, {
@@ -30,7 +30,7 @@ app.http('httpTrigger1', {
             // Ensures that the client will close when you finish/error
             await client.close();
         }
-        */
+        
         
 
         context.log(`Http function processed request for url "${request.url}"`);

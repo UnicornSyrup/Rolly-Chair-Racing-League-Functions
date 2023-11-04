@@ -3,7 +3,7 @@ app.http('httpTrigger1', {
     methods: ['GET',],
     authLevel: 'anonymous',
     handler: async (request, context) => {
-        const { MongoClient } = require("mongodb");
+        // const { MongoClient } = require("mongodb");
         
         let uri = `mongodb+srv://dbUser:${process.env.MONGO_PASSWORD}@cluster0.isxlqf2.mongodb.net/?retryWrites=true&w=majority`;
         // Create a MongoClient with a MongoClientOptions object to set the Stable API version

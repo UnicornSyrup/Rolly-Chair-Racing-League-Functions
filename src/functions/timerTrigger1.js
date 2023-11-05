@@ -1,7 +1,7 @@
 const { app } = require('@azure/functions');
 
 app.timer('timerTrigger1', {
-    schedule: '0 */5 * * * *',
+    schedule: '0 * * * * *',
     handler: (myTimer, context) => {
 
         const Http = new XMLHttpRequest();
